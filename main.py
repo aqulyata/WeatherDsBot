@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands
 from config import token
 client = discord.Client()
-
+#gg
 
 data={
         "type": "search by Artist",
