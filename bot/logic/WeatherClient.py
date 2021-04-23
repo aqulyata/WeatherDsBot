@@ -28,3 +28,14 @@ class WeatherClient:
         observation = self.get_observation(place)
         w = observation.weather
         return w.temperature('celsius')["temp"]
+
+    def get_reference(self, place):
+        observation = self.get_observation(place)
+        w = observation.weather
+        return w.reference_time("iso")
+
+
+    def get_pressure(self, place):
+        observation = self.get_observation(place)
+        w = observation.weather
+        return w.pressure["press"]
