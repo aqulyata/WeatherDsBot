@@ -1,10 +1,12 @@
+import json
+
 import discord
 
 import config
+from bot.Message import Message
 from bot.command.command import Command
 from bot.command.weather import WeatherCommand
 from bot.logic.JsonManager import JsonManager
-from bot.Message import Message
 
 prefix = '!'
 
@@ -18,6 +20,9 @@ class WeatherBotClient(discord.Client):
 
     async def on_ready(self):
         print('Logged on as', self.user)
+        with open('users_data.json', 'r', encoding='utf-8') as file:
+            data = json.load(file)
+            print(data)
 
     async def on_message(self, message):
 

@@ -4,7 +4,7 @@ import json
 
 
 class JsonManager:
-    BLOCK_SIZE = 10
+    BLOCK_SIZE = 1
 
     def __init__(self):
         self.messages: [Message] = []
@@ -19,8 +19,8 @@ class JsonManager:
         with open('users_data.json', 'w', encoding='utf-8') as file:
             json.dump(self.messages, file, cls=MyEncoder, indent=4, ensure_ascii=False)
 
-    def destruct(self):
-        ...
+    def __del__(self):
+        self.write_to_file()
 
 
     #todo 1 считывать файл при старте
