@@ -2,7 +2,13 @@
     {
         "tag": "!weather",
         "user": "Blighttown",
-        "command_text": "!weather хатанга",
-        "date": "23/04/21 20.55"
+        "command_text": "!weather noginsk'",
+        "date": "14/09/21 00.39"
+    },
+    {
+        "tag": "!weather",
+        "user": "Blighttown",
+        "command_text": "!weather noginsk",
+        "date": "14/09/21 00.39"
     }
 ]
